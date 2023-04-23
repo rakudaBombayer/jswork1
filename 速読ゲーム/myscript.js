@@ -5,8 +5,8 @@ var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 var myText = new function () {
   this.x = 0;
-  this.y = canvas.height/2;
-  this.xSpeed = 3;
+  this.y = canvas.height/8;
+  this.xSpeed = 1;
   // this.fontSize = 48;
   this.image = new Image();
   this.image.src = "../学長2.jpg" 
@@ -72,3 +72,10 @@ slowButton.addEventListener("click",function () {
 });
 
 loop();
+
+// ↑①問目
+
+// ↓2問目
+
+
+
