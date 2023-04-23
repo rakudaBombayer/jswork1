@@ -7,27 +7,28 @@ var myText = new function () {
   this.x = 0;
   this.y = canvas.height/2;
   this.xSpeed = 3;
-  this.fontSize = 48;
-  this.sentence = "おはようございます";
-  this.sentence = "動体視力テスト";
+  // this.fontSize = 48;
+  this.image = new Image();
+  this.image.src = "../学長2.jpg" 
 
   this.draw = function () {
-    var sentence = "おはようございます";
+    // var sentence = "おはようございます";
 
     this.x += this.xSpeed;  
 
-    if(this.x > canvas.width + sentence.length * this.fontSize)
+    if(this.x > canvas.width + this.image.width)
     {
       this.x =0;
     }
 
 
-    ctx.fillStyle = "#000";
-    ctx.font = "48px serif";
-    ctx.textAlign ="right";
-    ctx.fillText(this.sentence, this.x, this.y);
+    // ctx.fillStyle = "#000";
+    // ctx.font = "48px serif";
+    // ctx.textAlign ="right";
+    // ctx.fillText(this.sentence, this.x, this.y);
+    ctx.drawImage(this.image, this.x, this.y);
   }
-}
+};
 
 
 
@@ -38,10 +39,7 @@ function loop() {
   
   myText.draw();
   requestAnimationFrame(loop);
-  // ctx.fillStyle = "#000";
-  // ctx.font = "48px serif";
-  // ctx.textAlign ="center";
-  // ctx.fillText("おはよう", canvas.width/2, canvas.height/2);
+  
 }
 
 var sentences = ["こんにちは", "おはよう", "こんばんは"];
