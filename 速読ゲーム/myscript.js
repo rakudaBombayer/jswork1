@@ -6,7 +6,7 @@ var ctx = canvas.getContext("2d");
 var myText = new function () {
   this.x = 0;
   this.y = canvas.height/8;
-  this.xSpeed = 1;
+  this.xSpeed = 100;
   // this.fontSize = 48;
   this.image = new Image();
   this.image.src = "../学長2.jpg" 
@@ -42,9 +42,6 @@ function loop() {
   
 }
 
-var sentences = ["こんにちは", "おはよう", "こんばんは"];
-
-
 var myButton = document.getElementById("myButton");
 var slowButton = document.getElementById("slowButton");
 slowButton.style.display ='block';
@@ -76,6 +73,5 @@ loop();
 // ↑①問目
 
 // ↓2問目
-
 
 
