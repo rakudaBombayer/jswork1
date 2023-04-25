@@ -15,7 +15,7 @@ var myText = {
   }
 };
 
-var imageSources = ["../学長2.jpg","../学長2.jpg", "../ザキヤマ.jpg", "../まさよし.jpg"];
+var imageSources = ["../学長2.jpg","../学長2.jpg", "../ザキヤマ.jpg", "./まさよし3.jpg"];
 var currentIndex = 0;
 
 var myButton = document.getElementById("myButton");
