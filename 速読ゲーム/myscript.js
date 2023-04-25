@@ -33,6 +33,12 @@ slowButton.style.display = "block";
 slowButton.addEventListener("click", function() {
   myText.xSpeed = 1;
 });
+slowButton.addEventListener("click", function() {
+  audio.src = "../まさよしgame.mp3";
+  audio.play();
+});
+
+
 
 function loop() {
   ctx.fillStyle = "#ccc";
@@ -42,3 +48,22 @@ function loop() {
 }
 
 loop();
+
+
+// クリック時の音 3回目のボケ
+
+const myParagraph = document.getElementById("slowButton");
+const myAudio = document.getElementById("my-audio");
+let clickCount = 0;
+
+function handleClick() {
+  clickCount++;
+  if (clickCount === 3) {
+    myAudio.play();
+  }
+}
+
+myParagraph.addEventListener("click",handleClick
+);
+
+// ↑ここまで
